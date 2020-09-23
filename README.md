@@ -7,9 +7,9 @@
 **Zero-Config Docker containers designed for GitHub Codespaces**
 
 [![GitHub](https://img.shields.io/github/license/favware/codespaces-containers)](https://github.com/favware/codespaces-containers/blob/main/LICENSE.md)
-![Docker Pulls](https://img.shields.io/docker/pulls/favware/codespaces-containers?logo=docker&logoColor=%23FFFFFF)
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/favware/codespaces-containers/base?label=base%20image%20size&logo=docker&logoColor=%23FFFFFF)
-![Docker Image Size (tag)](https://img.shields.io/docker/image-size/favware/codespaces-containers/canvas?label=with-node-canvas%20image%20size&logo=docker&logoColor=%23FFFFFF)
+[![Docker Pulls](https://img.shields.io/docker/pulls/favware/codespaces-containers?logo=docker&logoColor=%23FFFFFF)](https://hub.docker.com/repository/docker/favware/codespaces-containers)
+[![Docker Image Size - base](https://img.shields.io/docker/image-size/favware/codespaces-containers/base?label=base%20image%20size&logo=docker&logoColor=%23FFFFFF)](https://hub.docker.com/repository/docker/favware/codespaces-containers)
+[![Docker Image Size - with-node-canvas](https://img.shields.io/docker/image-size/favware/codespaces-containers/canvas?label=with-node-canvas%20image%20size&logo=docker&logoColor=%23FFFFFF)](https://hub.docker.com/repository/docker/favware/codespaces-containers)
 
 </div>
 
