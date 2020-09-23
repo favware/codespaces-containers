@@ -136,15 +136,14 @@ First of all this image is based on the `codespaces-containers:base` image so ev
 
 Favware projects are open source and always will be, even if there are no donations. That said, we also know there are people out there that may still want to donate just to show their appreciation so this is for you guys. Thanks in advance!
 
-You can contribute in a multitude of ways:
+We accept donations through GitHub Sponsors, Ko-fi, Paypal and Patreon. You can use the buttons below to donate through your method of choice.
 
--   [PayPal](https://donate.favware.tech/paypal)
--   [Patreon](https://www.patreon.com/favna)
--   [Ko-Fi](https://ko-fi.com/favna)
--   [GitHub Sponsors Favna](https://github.com/sponsors/Favna)
--   Bitcoin: `1E643TNif2MTh75rugepmXuq35Tck4TnE5`
--   Ethereum: `0xF653F666903cd8739030D2721bF01095896F5D6E`
--   LiteCoin: `LZHvBkaJqKJRa8N7Dyu41Jd1PDBAofCik6`
+|   Donate With   |                     Address                      |
+| :-------------: | :----------------------------------------------: |
+| GitHub Sponsors | [Click Here](https://github.com/sponsors/Favna)  |
+|      Ko-fi      |      [Click Here](https://ko-fi.com/favna)       |
+|     Patreon     |   [Click Here](https://www.patreon.com/favna)    |
+|     PayPal      | [Click Here](https://donate.favware.tech/paypal) |
 
 ## Contributors ✨
 
