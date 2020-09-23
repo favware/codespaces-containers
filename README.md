@@ -4,7 +4,7 @@
 
 # Favware Codespaces Containers
 
-**Useful Docker containers designed for GitHub Codespaces**
+**Zero-Config Docker containers designed for GitHub Codespaces**
 
 [![GitHub](https://img.shields.io/github/license/favware/codespaces-containers)](https://github.com/favware/codespaces-containers/blob/main/LICENSE.md)
 ![Docker Pulls](https://img.shields.io/docker/pulls/favware/codespaces-containers?logo=docker&logoColor=%23FFFFFF)
