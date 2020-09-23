@@ -13,7 +13,25 @@
 
 </div>
 
-# Quick reference
+**Table of Contents**
+
+-   [Favware Codespaces Containers](#favware-codespaces-containers)
+    -   [Quick reference](#quick-reference)
+    -   [Supported tags and respective `Dockerfile` links](#supported-tags-and-respective-dockerfile-links)
+    -   [What are Codespaces-containers?](#what-are-codespaces-containers)
+        -   [What is included in the `base` image?](#what-is-included-in-the-base-image)
+            -   [Debian Packages](#debian-packages)
+            -   [Globally installed NPM CLI Tools](#globally-installed-npm-cli-tools)
+            -   [Other CLI Tools](#other-cli-tools)
+            -   [CLI Configuration](#cli-configuration)
+            -   [Dotfiles Configuration](#dotfiles-configuration)
+            -   [Other](#other)
+        -   [What is included in the `with-node-canvas` image?](#what-is-included-in-the-with-node-canvas-image)
+            -   [Debain Packages](#debain-packages)
+    -   [Buy us some doughnuts](#buy-us-some-doughnuts)
+    -   [Contributors ✨](#contributors-%E2%9C%A8)
+
+## Quick reference
 
 -   **Maintained by**:  
     [Favware](https://github.com/favware)
@@ -24,18 +42,18 @@
 -   **Where to file issues**:  
     [https://github.com/favware/codespaces-containers/issues](https://github.com/favware/codespaces-containers/issues)
 
-# Supported tags and respective `Dockerfile` links
+## Supported tags and respective `Dockerfile` links
 
 -   [`latest`, `main`, `base`](https://github.com/favware/codespaces-containers/blob/main/base/Dockerfile)
 -   [`with-node-canvas`, `with-canvas`, `canvas`](https://github.com/favware/codespaces-containers/blob/main/with-node-canvas/Dockerfile)
 
-# What are Codespaces-containers?
+## What are Codespaces-containers?
 
 Images published under [`favware/codespaces-containers`] are designed to be used for GitHub Codespaces. They are specifically set up to provide the best Ubuntu-based VSCode coding experience out-of-the-box and zero-config to get started quick and easy.
 
-## What is included in the `base` image?
+### What is included in the `base` image?
 
-### Debian Packages
+#### Debian Packages
 
 -   [apt-transport-https]
 -   [build-essential]
@@ -45,14 +63,14 @@ Images published under [`favware/codespaces-containers`] are designed to be used
 -   [htop]
 -   [nano]
 -   [neofetch]
--   [NodeJS] (v14)
--   [powershell] (v7)
+-   [NodeJS](v14)
+-   [powershell](v7)
 -   [tree]
 -   [vim]
 -   [wget]
 -   [zsh]
 
-### Globally installed NPM CLI Tools
+#### Globally installed NPM CLI Tools
 
 -   [all-contributors-cli]
 -   [commitizen]
@@ -70,11 +88,11 @@ Images published under [`favware/codespaces-containers`] are designed to be used
 -   [ts-node]
 -   [typescript]
 
-### Other CLI Tools
+#### Other CLI Tools
 
 -   [GitHub CLI][] (v1.0.0)
 
-### CLI Configuration
+#### CLI Configuration
 
 The default shell is set to [`zsh`], with the [`oh-my-zsh`] framework. The following custom plugins are added:
 
@@ -84,19 +102,31 @@ The default shell is set to [`zsh`], with the [`oh-my-zsh`] framework. The follo
 
 Furthermore oh-my-zsh is configured to use the [`powerlevel10k`] theme.
 
-For the full zsh configuration see the [Dotfiles Configuration]
+For the full zsh configuration see the [Dotfiles Configuration](#dotfiles-configuration)
 
-### Dotfiles Configuration
+#### Dotfiles Configuration
 
 -   [`.p10k.zsh`]
 -   [`.profile`]
 -   [`.zshrc`]
 
-### Other
+#### Other
 
 Lastly the [MesloLGS NF][] font has been added to provide proper glyphs for the [`powerlevel10k`] theme
 
-### Buy us some doughnuts
+### What is included in the `with-node-canvas` image?
+
+First of all this image is based on the `base` image so everything listed above is included. Additionally, the following are also included:
+
+#### Debain Packages
+
+-   [libcairo2-dev]
+-   [libgif-dev]
+-   [libjpeg-dev]
+-   [libpango1.0-dev]
+-   [librsvg2-dev]
+
+## Buy us some doughnuts
 
 Favware projects are open source and always will be, even if there are no donations. That said, we also know there are people out there that may still want to donate just to show their appreciation so this is for you guys. Thanks in advance!
 
@@ -125,6 +155,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
@@ -151,6 +182,11 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 [htop]: https://packages.debian.org/stretch/htop
 [http-server]: https://npmjs.com/package/http-server
 [jest]: https://npmjs.com/package/jest
+[libcairo2-dev]: https://packages.debian.org/stretch/libcairo2-dev
+[libgif-dev]: https://packages.debian.org/stretch/libgif-dev
+[libjpeg-dev]: https://packages.debian.org/stretch/libjpeg-dev
+[libpango1.0-dev]: https://packages.debian.org/stretch/libpango1.0-dev
+[librsvg2-dev]: https://packages.debian.org/stretch/librsvg2-dev
 [lint-staged]: https://npmjs.com/package/lint-staged
 [meslolgs nf]: https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 [nano]: https://packages.debian.org/stretch/nano
