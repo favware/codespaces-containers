@@ -1,8 +1,8 @@
 FROM favware/codespaces-containers:base
 
 # Install additional OS packages.
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-	&& apt-get -y install \
+RUN sudo apt-get update && export DEBIAN_FRONTEND=noninteractive \
+	&& sudo apt-get -y install \
 	libcairo2-dev \
 	libgif-dev \
 	libjpeg-dev \
