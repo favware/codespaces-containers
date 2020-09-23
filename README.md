@@ -49,9 +49,11 @@
 
 ## What are Codespaces-containers?
 
-Images published under [`favware/codespaces-containers`] are designed to be used for GitHub Codespaces. They are specifically set up to provide the best Ubuntu-based VSCode coding experience out-of-the-box and zero-config to get started quick and easy.
+Images published under [`favware/codespaces-containers`] are designed to be used for GitHub Codespaces. They are specifically set up to provide the best Debian 9 (Stretch) based VSCode coding experience out-of-the-box and zero-config to get started quick and easy.
 
 ### What is included in the `base` image?
+
+First of all this image is based on the [`mcr.microsoft.com/vscode/devcontainers/typescript-node:14`] image so everything that is included in that image, is also included in here. Additionally, the following are also included:
 
 #### Debian Packages
 
@@ -116,7 +118,7 @@ Lastly the [MesloLGS NF][] font has been added to provide proper glyphs for the 
 
 ### What is included in the `with-node-canvas` image?
 
-First of all this image is based on the `base` image so everything listed above is included. Additionally, the following are also included:
+First of all this image is based on the `codespaces-containers:base` image so everything listed above is included. Additionally, the following are also included:
 
 #### Debain Packages
 
@@ -166,6 +168,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 [`.profile`]: https://raw.githubusercontent.com/Favna/dotfiles/main/.profile
 [`.zshrc`]: https://raw.githubusercontent.com/Favna/dotfiles/main/.zshrc
 [`favware/codespaces-containers`]: https://github.com/favware/codespaces-containers
+[`mcr.microsoft.com/vscode/devcontainers/typescript-node:14`]: https://hub.docker.com/_/microsoft-vscode-devcontainers
 [`oh-my-zsh`]: https://ohmyz.sh/
 [`powerlevel10k`]: https://github.com/romkatv/powerlevel10k
 [`zsh`]: https://en.wikipedia.org/wiki/Z_shell
