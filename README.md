@@ -59,14 +59,18 @@ First of all this image is based on the [`mcr.microsoft.com/vscode/devcontainers
 
 -   [apt-transport-https]
 -   [build-essential]
+-   [ca-certificates]
 -   [curl]
+-   [dirmngr]
 -   [fonts-firacode]
 -   [gnupg]
 -   [htop]
+-   [lsb-release]
 -   [nano]
 -   [neofetch]
--   [NodeJS](v14)
--   [powershell](v7)
+-   [NodeJS][] (v14)
+-   [powershell][] (v7)
+-   [software-properties-common]
 -   [tree]
 -   [vim]
 -   [wget]
@@ -175,8 +179,10 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 [all-contributors-cli]: https://npmjs.com/package/all-contributors-cli
 [apt-transport-https]: https://packages.debian.org/stretch/apt-transport-https
 [build-essential]: https://packages.debian.org/stretch/build-essential
+[ca-certificates]: https://packages.debian.org/stretch/ca-certificates
 [commitizen]: https://npmjs.com/package/commitizen
 [curl]: https://packages.debian.org/stretch/curl
+[dirmngr]: https://packages.debian.org/stretch/dirmngr
 [eslint]: https://npmjs.com/package/eslint
 [fonts-firacode]: https://packages.debian.org/stretch/fonts-firacode
 [git-open]: https://npmjs.com/package/git-open
@@ -191,6 +197,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 [libpango1.0-dev]: https://packages.debian.org/stretch/libpango1.0-dev
 [librsvg2-dev]: https://packages.debian.org/stretch/librsvg2-dev
 [lint-staged]: https://npmjs.com/package/lint-staged
+[lsb-release]: https://packages.debian.org/stretch/lsb-release
 [meslolgs nf]: https://github.com/romkatv/powerlevel10k#meslo-nerd-font-patched-for-powerlevel10k
 [nano]: https://packages.debian.org/stretch/nano
 [neofetch]: https://packages.debian.org/stretch/neofetch
@@ -201,6 +208,7 @@ This project follows the [all-contributors](https://github.com/all-contributors/
 [prettier]: https://npmjs.com/package/prettier
 [rimraf]: https://npmjs.com/package/rimraf
 [rollup]: https://npmjs.com/package/rollup
+[software-properties-common]: https://packages.debian.org/stretch/software-properties-common
 [standard-version]: https://npmjs.com/package/standard-version
 [tree]: https://packages.debian.org/stretch/tree
 [ts-node]: https://npmjs.com/package/ts-node

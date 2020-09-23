@@ -1,5 +1,16 @@
 FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:14
 
+# Install packages required for installing other packages
+RUN apt-get update \
+	&& apt-get -y install \
+	apt-transport-https \
+	ca-certificates \
+	curl \
+	dirmngr \
+	gnupg \
+	lsb-release \
+	software-properties-common
+
 # Import the Microsoft public repository GPG keys
 RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
 
@@ -10,13 +21,11 @@ RUN echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian
 RUN sed 's/stretch main/stretch main contrib non-free/g' -i /etc/apt/sources.list
 
 # Install additional OS packages.
-RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
+RUN add-apt-repository "deb http://ftp.us.debian.org/debian stretch main contrib non-free" \
+	&& apt-get update \
 	&& apt-get -y install \
-	apt-transport-https \
 	build-essential \
-	curl \
 	fonts-firacode \
-	gnupg \
 	htop \
 	nano \
 	neofetch \
@@ -32,11 +41,9 @@ RUN curl -sL https://github.com/cli/cli/releases/download/v1.0.0/gh_1.0.0_linux_
 	&& chmod +x /usr/local/bin/gh
 
 # Install various NPM packages globally.
-RUN sudo -u node npm install -g typescript eslint
 RUN sudo -u node npm install -g \
 	all-contributors-cli \
 	commitizen \
-	eslint \
 	eslint \
 	git-open \
 	http-server \
