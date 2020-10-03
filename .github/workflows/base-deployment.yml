@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'base/**'
-      - '.github/workflows/base-deployment.yml'
+      - base/**
+      - .github/workflows/base-deployment.yml
 
 jobs:
   Base-Image-Dockerhub:

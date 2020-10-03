@@ -11,29 +11,32 @@ RUN apt-get update \
 	lsb-release \
 	software-properties-common
 
-# Import the Microsoft public repository GPG keys
-RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | apt-key add -
-
-# Register the Microsoft Product feed
-RUN echo "deb [arch=amd64] https://packages.microsoft.com/repos/microsoft-debian-stretch-prod stretch main" > /etc/apt/sources.list.d/microsoft.list
-
 # Add contrib and non-free repos to sources
-RUN sed 's/stretch main/stretch main contrib non-free/g' -i /etc/apt/sources.list
+RUN sed 's/buster main/buster main contrib non-free/g' -i /etc/apt/sources.list
 
 # Install additional OS packages.
-RUN add-apt-repository "deb http://ftp.us.debian.org/debian stretch main contrib non-free" \
+RUN add-apt-repository "deb http://ftp.us.debian.org/debian buster main contrib non-free" \
 	&& apt-get update \
+	&& apt-get upgrade -y \
 	&& apt-get -y install \
 	build-essential \
 	fonts-firacode \
 	htop \
 	nano \
 	neofetch \
-	powershell \
 	tree \ 
 	vim \
 	wget \
 	zsh
+
+# Install PowerShell
+# Download the Microsoft repository GPG keys
+RUN wget https://packages.microsoft.com/config/debian/10/packages-microsoft-prod.deb \ 
+	# Register the Microsoft repository GPG keys
+	&& dpkg -i packages-microsoft-prod.deb \
+	&& apt-get update \
+	&& apt-get -y install \
+	powershell
 
 # Download GitHub CLI v1.0.0 and put it in /usr/local/bin
 RUN curl -sL https://github.com/cli/cli/releases/download/v1.0.0/gh_1.0.0_linux_amd64.tar.gz | tar -xz --wildcards "*gh" && mv gh*linux_amd64/bin/gh . && rm -r gh_*linux_amd64 \
@@ -85,4 +88,6 @@ RUN git clone https://github.com/favware/zsh-git-enhanced.git /home/node/.oh-my-
 	&& curl -sLo /home/node/.fonts/MesloLGS\ NF\ Italic.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Italic.ttf \
 	&& curl -sLo /home/node/.fonts/MesloLGS\ NF\ Bold\ Italic.ttf https://github.com/romkatv/powerlevel10k-media/raw/master/MesloLGS%20NF%20Bold%20Italic.ttf \
 	# Modify syntax line highlighter path
-	&& curl -sL https://raw.githubusercontent.com/Favna/dotfiles/main/line-highlighters-addition.zsh >> /home/node/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/line/line-highlighter.zsh
+	&& curl -sL https://raw.githubusercontent.com/Favna/dotfiles/main/extra/line-highlighters-addition.zsh >> /home/node/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting/highlighters/line/line-highlighter.zsh
+
+CMD [ "/bin/zsh" ]

@@ -5,8 +5,8 @@ on:
     branches:
       - main
     paths:
-      - 'with-node-canvas/**'
-      - '.github/workflows/canvas-deployment.yml'
+      - with-node-canvas/**
+      - .github/workflows/canvas-deployment.yml
 
 jobs:
   Canvas-Image-Dockerhub:
