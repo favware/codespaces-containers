@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:16
+FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:18
 
 # Install packages required for installing other packages
 RUN apt-get update \
